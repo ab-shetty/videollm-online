@@ -46,6 +46,31 @@ By passing ```--resume_from_checkpoint chenjoya/videollm-online-8b-v1plus```, th
 
 ### Installation
 
+#### The SageMaker Way
+
+To run this in SageMaker, first create a fresh conda environment
+
+```
+conda create -n pytorch_env python=3.10
+conda init
+```
+
+Then exit the shell and reopen it and run
+
+```
+conda activate pytorch_env
+```
+
+Next, copy over the dependencies file to the root and run it
+
+```
+cp videollm-online/dependencies.sh .
+chmod +x dependencies.sh
+./dependencies.sh
+```
+
+___
+
 Ensure you have Miniconda and Python version >= 3.10 installed, then run:
 ```sh
 conda install -y pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia

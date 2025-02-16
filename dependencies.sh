@@ -5,6 +5,9 @@ set -e  # Exit immediately if a command exits with a non-zero status
 # Install PyTorch and dependencies
 conda install -y pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 
+# Install CUDA toolkit
+conda install -y -c "nvidia/label/cuda-12.1.1" cuda-toolkit
+
 # Install required Python packages
 pip install transformers accelerate deepspeed peft editdistance Levenshtein tensorboard gradio moviepy submitit
 pip install flash-attn --no-build-isolation
