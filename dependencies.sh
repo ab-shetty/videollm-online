@@ -20,5 +20,9 @@ rm ffmpeg-release-amd64-static.tar.xz
 # Rename extracted FFmpeg directory
 mv ffmpeg-*-amd64-static ffmpeg
 
+# Set Hugging Face variables
+export HF_HUB_ENABLE_HF_TRANSFER=1
+huggingface-cli login
+
 # Confirm installation
 echo "Installation complete."
