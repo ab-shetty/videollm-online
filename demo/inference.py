@@ -1,5 +1,5 @@
 import torch, torchvision, transformers, collections
-torchvision.set_video_backend('video_reader')
+torchvision.set_video_backend('pyav')
 from dataclasses import asdict
 from torchvision.io import read_video
 
